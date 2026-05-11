@@ -176,7 +176,7 @@ Respond as Steve Jobs would - focus on product excellence, user experience, desi
 }
 
 # -----------------------------
-# 3. Enhanced Data Models
+# 3. Enhanced Data Models, 
 # -----------------------------
 class ChatMessage(BaseModel):
     message: str = Field(..., min_length=1, max_length=2000, description="The user's message")
@@ -246,11 +246,11 @@ class AppState:
         if expired_sessions:
             logger.info(f"Cleaned up {len(expired_sessions)} expired sessions")
 
-# Global app state
+# Global app state, 
 app_state = AppState()
 
 # -----------------------------
-# 5. FastAPI Application Setup
+# 5. FastAPI Application Setup here 
 # -----------------------------
 @asynccontextmanager
 async def lifespan(app: FastAPI):
